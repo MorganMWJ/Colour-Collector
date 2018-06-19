@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		<title>Colour Collector - About</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="gameStyle.css">
+	</head>
+	<body>
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+			<div class="navbar-header">
+			  <a class="navbar-brand">Client-Side Graphics Programming Assignment</a>
+			</div>
+			<ul class="nav navbar-nav">
+			  <li><a href="http://users.aber.ac.uk/mwj7/cs25210/gamePage.html">Go To Game Page</a></li>
+			</ul>
+		  </div>
+		</nav>
+		
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>Gameplay</h3>
+						</div>
+						
+						<div class="panel-body">
+							<div class="mainText">
+								<p>	The players job is to push points out of the arena and into the goals to gain a higher score.
+									For every point that misses a goal the player will lose a life, when the player gets to zero lives its game over.
+									When there are no points left in the arena a new level will start, at the start of every level an amount of points dependant on the current level will spawn.
+									On some levels there is a chance for an extra life to spawn instead of a point that can be collected by the player
+									or/and an obstacle to spawn that if collected will cause the player to lose a life, all spawn chances/rates are dependant on the current difficulty setting.
+								</p>
+								<p>
+									<strong>Easy: </strong> Easy difficulty increases the size of the goals making it easy to score. Extra lives have a 75% chance to spawn on every level and obstacles don't spawn at all.
+									<br />After level 5 the points per level is equal to the currentLevel + currentLevel%2.
+								</p>
+								<p>
+									<strong>Medium: </strong> On medium difficulty extra lives have a 75% chance to spawn every 2 levels and obstacles spawn every 2 levels after level 5.
+									<br />After level 5 the points per level is equal to the currentLevel + currentLevel%3.
+								</p>
+								<p>
+									<strong>Hard: </strong> On hard difficulty extra lives have a 75% to spawn every 4 levels and obstacles spawn every level after level 2.
+									<br />After level 5 the points per level is equal to the currentLevel + currentLevel%4.
+								</p>
+								<p>
+									Difficulty can be changed at any time during game play(See controls below).
+									The current difficulty along with the players lives, level, score and personal high score is displayed on the in-game display on the right of the canvas.
+								</p>
+								<p>
+									A high score is saved for the player in each difficulty, this score will persist between user visits to the site.
+									For the difficulty to be changed the game has to be restarted, with the exception of when on the start screen, this is to prevent cheating by moving a score from easy to hard mid-way through a game.
+								</p>
+								<p>
+									To move the player object with the mouse the cursor has to hover over it, when doing this the cursor will be invisible.
+									When the mouse comes out of the arena or the user uses the arrow keys for alternative control the cursor will return to be visible.
+									At this point the user must hover over the player if he/she wishes to regain control of the player.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="col-md-8">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>Game Objects</h3>
+						</div>
+						
+						<div class="panel-body">			
+							<ul>
+								<li>Player - The green circle with a black border.</li>
+								<li>Arena - The transparent red circle in the center.</li>
+								<li>Goals - Large yellow quarter circles with green borders, there is one in each corner of the game window.</li>
+								<li>Points - Small yellow circles that spawn in the arena, they award +100 score when hit into the goals but cost -1 life if hit out of the game window.</li>
+								<li>Extra Lives - Medium turquoise circles with purple borders, they award +1 life when collected.</li>
+								<li>Obstacles - Medium crimson circles with black borders, they cost -1 life if collected.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-md-4">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>Controls</h3>
+						</div>
+						
+						<div class="panel-body">			
+							<ul>
+								<li>Use the mouse or directional keys to control the player movement.</li>
+								<li>Press <kbd>r</kbd> to restart the game at any time.</li>
+								<li>Press <kbd>m</kbd> to toggle the in-game music.</li>
+								<li>Press <kbd>Esc</kbd> to pause the game.</li>
+								<li>Press <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd> to change between Easy, Medium and Hard difficulty respectively.</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12">
+					<div class="panel panel-default">
+						<div class="panel-heading">
+							<h3>Credits</h3>
+						</div>
+
+						<div class="panel-body">
+							<div class="mainText">
+								<p>I have used the Bootstrap CSS framework(along with my own CSS) to style my web site, I have included this from a content delivery network(MaxCDN).</p>
+								<p>
+									For the background music in my game I used a free download from playonloop.com - <a href="http://www.playonloop.com/2016-music-loops/mutant-jackrabbit/">http://www.playonloop.com/2016-music-loops/mutant-jackrabbit/</a>
+									<br />(All of the sound effects that play during in-game events were recorded by me.)
+								</p>
+								<p>My looping background image - <a href="http://churchmediadesign.tv/downloads/diamond1_HD.jpg">http://churchmediadesign.tv/downloads/diamond1_HD.jpg</a></p>
+								<p>The pause icon used in the bottom left of the in-game display - <a href="https://cdn1.iconfinder.com/data/icons/material-audio-video/20/pause-circle-outline-128.png">https://cdn1.iconfinder.com/data/icons/material-audio-video/20/pause-circle-outline-128.png</a></p>
+								<p>The play icon used in the bottom left of the in-game display - <a href="https://cdn4.iconfinder.com/data/icons/social-messaging-productivity-1/128/play-icon-2-128.png">https://cdn4.iconfinder.com/data/icons/social-messaging-productivity-1/128/play-icon-2-128.png</a></p>
+								<p>The mute icon used in the bottom right of the in-game display - <a href="http://simpleicon.com/wp-content/uploads/volume-mute.png">http://simpleicon.com/wp-content/uploads/volume-mute.png</a></p>
+								<p>The un-mute icon used in the bottom right of the in-game display - <a href="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/2000px-Speaker_Icon.svg.png">https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Speaker_Icon.svg/2000px-Speaker_Icon.svg.png</a></p>
+								<p>Any code in my site or game, unless explicitly mentioned, has been written by me.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row" id="footer">
+				<p><i>The information provided on this and other pages by me, Morgan Jones (mwj7@aber.ac.uk),<br />
+				is under my own personal responsibility and not that of Aberystwyth University.<br />
+				Similarly, any opinions expressed are my own and are in no way to be taken as those of A.U.
+				</i></p>
+			</div>
+		</div>
+	</body>
+</html>
